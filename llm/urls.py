@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import Main
+from llm.views import handle_command
 
 urlpatterns = [
-    path('process-command/', Main.as_view(), name='process-command'),
+    path('command/', handle_command, name='handle_command'),
 ]
