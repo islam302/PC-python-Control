@@ -1,6 +1,6 @@
 from django.urls import path
-from llm.views import handle_command
+from .views import ExecuteTaskView
 
 urlpatterns = [
-    path('command/', handle_command, name='handle_command'),
+    path("execute-task/", ExecuteTaskView.as_view(), name="execute-task"),
 ]

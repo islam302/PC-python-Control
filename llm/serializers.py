@@ -1,6 +1,12 @@
-
 from rest_framework import serializers
+from .models import Objective, CommandLog
 
+class ObjectiveSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Objective
+        fields = '__all__'
 
-class CommandSerializer(serializers.Serializer):
-    action = serializers.CharField()
+class CommandLogSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommandLog
+        fields = '__all__'
